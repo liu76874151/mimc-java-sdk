@@ -5,7 +5,7 @@
 ## 下面的例子中所使用到的常量解释：
 
 ```
-$appId				表示appId
+$appId					表示appId
 $topicName				表示创建群的时候所指定的群名称
 $userAccount1				表示群成员1号account
 $userAccount2				表示群成员2号account
@@ -22,10 +22,11 @@ $newBulletin				表示更新群时设置的新群公告
 $newTopicName				表示更新群时设置的新群名称
 ```
 
-## PS：
-
-#### token的获取使用User.getToken()方法
-#### uuid的获取使用User.getUuid()方法
+### PS：
+```
+	token的获取使用User.getToken()方法
+	uuid的获取使用User.getUuid()方法
+```
 
 ## 1) 创建群(createTopic)：
 
@@ -147,7 +148,9 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/account" -XDELETE -
 ```
 
 + 若是群主退群，则JSON结果如下：
+```
 	{"code":500,"message":"quit topic fail","data":null}
+```
  
 ## 5) 群主踢用户退群(kickTopic):
 
@@ -213,4 +216,6 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId?" -XPUT -d '{"topic
 curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId" -XDELETE -H "Content-Type: application/json" -H "token:$ownerToken"
 	
 + JSON结果
+```
 	{"code":200,"message":"success！","data":null}
+```
