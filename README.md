@@ -40,22 +40,25 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId" -XPOST -d '{"topicName":$to
 	
 + JSON结果
 ```
-{"code":200,"message":"success",
- "data":{
-	"topicInfo":{
-		"topicId":$topicId,
-		"ownerUuid":$ownerUuid,
-		"name":$topicName,
-		"bulletin":"",
-		"setTopicId":true,
-		"setOwnerUuid":true,
-		"setName":true,
-		"setBulletin":true},
-	"members":[
-		{"uuid":$ownerUuid,"account":$ownerAccount},
-		{"uuid":$userUuid1,"account":$userAccount1},
-		{"uuid":$userUuid2,"account":$userAccount2},
-		{"uuid":$userUuid3,"account":$userAccount3}]
+{
+	 "code":200,"message":"success",
+	 "data":{
+		"topicInfo":{
+			"topicId":$topicId,
+			"ownerUuid":$ownerUuid,
+			"name":$topicName,
+			"bulletin":"",
+			"setTopicId":true,
+			"setOwnerUuid":true,
+			"setName":true,
+			"setBulletin":true
+		},
+		"members":[
+			{"uuid":$ownerUuid,"account":$ownerAccount},
+			{"uuid":$userUuid1,"account":$userAccount1},
+			{"uuid":$userUuid2,"account":$userAccount2},
+			{"uuid":$userUuid3,"account":$userAccount3}
+		]
 	}
 }
 ```
@@ -71,23 +74,26 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId" -H "Content-Type: 
 
 + JSON结果
 ```
-{"code":200,"message":"success",
- "data":{
-	"topicInfo":{
-		"topicId":$topicId,
-		"ownerUuid":$ownerUuid,
-		"name":$topicName,
-		"bulletin":"",
-		"setTopicId":true,
-		"setOwnerUuid":true,
-		"setName":true,
-		"setBulletin":true},
-	"members":[
-		{"uuid":$ownerUuid,"account":$ownerAccount},
-		{"uuid":$userUuid1,"account":$userAccount1},
-		{"uuid":$userUuid2,"account":$userAccount2},
-		{"uuid":$userUuid3,"account":$userAccount3}]
-	}
+{
+	 "code":200,"message":"success",
+	 "data":{
+		"topicInfo":{
+			"topicId":$topicId,
+			"ownerUuid":$ownerUuid,
+			"name":$topicName,
+			"bulletin":"",
+			"setTopicId":true,
+			"setOwnerUuid":true,
+			"setName":true,
+			"setBulletin":true
+		},
+		"members":[
+			{"uuid":$ownerUuid,"account":$ownerAccount},
+			{"uuid":$userUuid1,"account":$userAccount1},
+			{"uuid":$userUuid2,"account":$userAccount2},
+			{"uuid":$userUuid3,"account":$userAccount3}
+		]
+	 }
 }
 ```
 
@@ -102,24 +108,27 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts" -XPOST -d
 
 + JSON结果
 ```
-{"code":200,"message":"success",
- "data":{
-	"topicInfo":{
-		"topicId":$topicId,
-		"ownerUuid":$ownerUuid,
-		"name":$topicName,
-		"bulletin":"",
-		"setTopicId":true,
-		"setOwnerUuid":true,
-		"setName":true,
-		"setBulletin":true},
-	"members":[
-		{"uuid":$ownerUuid,"account":$ownerAccount},
-		{"uuid":$userUuid1,"account":$userAccount1},
-		{"uuid":$userUuid2,"account":$userAccount2},
-		{"uuid":$userUuid1,"account":$userAccount3},
-		{"uuid":$userUuid2,"account":$userAccount4},
-		{"uuid":$userUuid3,"account":$userAccount5}]
+{
+	 "code":200,"message":"success",
+	 "data":{
+		"topicInfo":{
+			"topicId":$topicId,
+			"ownerUuid":$ownerUuid,
+			"name":$topicName,
+			"bulletin":"",
+			"setTopicId":true,
+			"setOwnerUuid":true,
+			"setName":true,
+			"setBulletin":true
+		},
+		"members":[
+			{"uuid":$ownerUuid,"account":$ownerAccount},
+			{"uuid":$userUuid1,"account":$userAccount1},
+			{"uuid":$userUuid2,"account":$userAccount2},
+			{"uuid":$userUuid1,"account":$userAccount3},
+			{"uuid":$userUuid2,"account":$userAccount4},
+			{"uuid":$userUuid3,"account":$userAccount5}
+		]
 	}
 }
 ```
@@ -135,23 +144,26 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/account" -XDELETE -
 	
 + JSON结果
 ```
-{"code":200,"message":"success",
- "data":{
-	"topicInfo":{
-		"topicId":$topicId,
-		"ownerUuid":$ownerUuid,
-		"name":$topicName,
-		"bulletin":"",
-		"setTopicId":true,
-		"setOwnerUuid":true,
-		"setName":true,
-		"setBulletin":true},
-	"members":[
-		{"uuid":$ownerUuid,"account":$ownerAccount},
-		{"uuid":$userUuid2,"account":$userAccount2},
-		{"uuid":$userUuid1,"account":$userAccount3},
-		{"uuid":$userUuid2,"account":$userAccount4},
-		{"uuid":$userUuid3,"account":$userAccount5}]
+{
+	 "code":200,"message":"success",
+	 "data":{
+		"topicInfo":{
+			"topicId":$topicId,
+			"ownerUuid":$ownerUuid,
+			"name":$topicName,
+			"bulletin":"",
+			"setTopicId":true,
+			"setOwnerUuid":true,
+			"setName":true,
+			"setBulletin":true
+		},
+		"members":[
+			{"uuid":$ownerUuid,"account":$ownerAccount},
+			{"uuid":$userUuid2,"account":$userAccount2},
+			{"uuid":$userUuid1,"account":$userAccount3},
+			{"uuid":$userUuid2,"account":$userAccount4},
+			{"uuid":$userUuid3,"account":$userAccount5}
+		]
 	}
 }
 ```
@@ -172,21 +184,24 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts?$userAccou
 	
 + JSON结果
 ```
-{"code":200,"message":"success",
- "data":{
-	"topicInfo":{
-		"topicId":$topicId,
-		"ownerUuid":$ownerUuid,
-		"name":$topicName,
-		"bulletin":"",
-		"setTopicId":true,
-		"setOwnerUuid":true,
-		"setName":true,
-		"setBulletin":true},
-	"members":[
-		{"uuid":$ownerUuid,"account":$ownerAccount},
-		{"uuid":$userUuid2,"account":$userAccount2},
-		{"uuid":$userUuid3,"account":$userAccount3}]
+{
+	 "code":200,"message":"success",
+	 "data":{
+		"topicInfo":{
+			"topicId":$topicId,
+			"ownerUuid":$ownerUuid,
+			"name":$topicName,
+			"bulletin":"",
+			"setTopicId":true,
+			"setOwnerUuid":true,
+			"setName":true,
+			"setBulletin":true
+		},
+		"members":[
+			{"uuid":$ownerUuid,"account":$ownerAccount},
+			{"uuid":$userUuid2,"account":$userAccount2},
+			{"uuid":$userUuid3,"account":$userAccount3}
+		]
 	}
 }
 ```
@@ -197,26 +212,29 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts?$userAccou
 	
 + HTTPS请求
 ```
-curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId?" -XPUT -d '{"topicId":$topicId, "ownerUuid":$userUuid2,"name":$newTopicName,"bulletin":$newBulletin}' -H "Content-Type: application/json" -H "token:$ownerToken"
+curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId" -XPUT -d '{"topicId":$topicId, "ownerUuid":$userUuid2,"name":$newTopicName,"bulletin":$newBulletin}' -H "Content-Type: application/json" -H "token:$ownerToken"
 ```
 	
 + JSON结果
 ```
-{"code":200,"message":"success",
- "data":{
-	"topicInfo":{
-		"topicId":$topicId,
-		"ownerUuid":$userUuid2,
-		"name":$newTopicName,
-		"bulletin":$newBulletin,
-		"setTopicId":true,
-		"setOwnerUuid":true,
-		"setName":true,
-		"setBulletin":true},
-	"members":[
-		{"uuid":$ownerUuid,"account":$ownerAccount},
-		{"uuid":$userUuid2,"account":$userAccount2},
-		{"uuid":$userUuid3,"account":$userAccount3}]
+{
+	 "code":200,"message":"success",
+	 "data":{
+		"topicInfo":{
+			"topicId":$topicId,
+			"ownerUuid":$userUuid2,
+			"name":$newTopicName,
+			"bulletin":$newBulletin,
+			"setTopicId":true,
+			"setOwnerUuid":true,
+			"setName":true,
+			"setBulletin":true
+		},
+		"members":[
+			{"uuid":$ownerUuid,"account":$ownerAccount},
+			{"uuid":$userUuid2,"account":$userAccount2},
+			{"uuid":$userUuid3,"account":$userAccount3}
+		]
 	}
 }
 ```
