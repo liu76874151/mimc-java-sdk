@@ -1,8 +1,8 @@
 
 群聊API：
 
-下面的李子中所使用到的常量解释：
-	$appId						表示appId
+下面的例子中所使用到的常量解释：
+	$appId						  表示appId
 	$topicName					表示创建群的时候所指定的群名称
 	$userAccount1				表示群成员1号account
 	$userAccount2				表示群成员2号account
