@@ -47,11 +47,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId" -XPOST -d '{"topicName":$to
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
 			"name":$topicName,
-			"bulletin":"",
-			"setTopicId":true,
-			"setOwnerUuid":true,
-			"setName":true,
-			"setBulletin":true
+			"bulletin":""
 		},
 		"members":[
 			{"uuid":$ownerUuid,"account":$ownerAccount},
@@ -81,11 +77,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId" -H "Content-Type: 
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
 			"name":$topicName,
-			"bulletin":"",
-			"setTopicId":true,
-			"setOwnerUuid":true,
-			"setName":true,
-			"setBulletin":true
+			"bulletin":""
 		},
 		"members":[
 			{"uuid":$ownerUuid,"account":$ownerAccount},
@@ -115,11 +107,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts" -XPOST -d
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
 			"name":$topicName,
-			"bulletin":"",
-			"setTopicId":true,
-			"setOwnerUuid":true,
-			"setName":true,
-			"setBulletin":true
+			"bulletin":""
 		},
 		"members":[
 			{"uuid":$ownerUuid,"account":$ownerAccount},
@@ -151,11 +139,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/account" -XDELETE -
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
 			"name":$topicName,
-			"bulletin":"",
-			"setTopicId":true,
-			"setOwnerUuid":true,
-			"setName":true,
-			"setBulletin":true
+			"bulletin":""
 		},
 		"members":[
 			{"uuid":$ownerUuid,"account":$ownerAccount},
@@ -191,11 +175,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts?accounts=$
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
 			"name":$topicName,
-			"bulletin":"",
-			"setTopicId":true,
-			"setOwnerUuid":true,
-			"setName":true,
-			"setBulletin":true
+			"bulletin":""
 		},
 		"members":[
 			{"uuid":$ownerUuid,"account":$ownerAccount},
@@ -224,11 +204,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId" -XPUT -d '{"topicI
 			"topicId":$topicId,
 			"ownerUuid":$userUuid2,
 			"name":$newTopicName,
-			"bulletin":$newBulletin,
-			"setTopicId":true,
-			"setOwnerUuid":true,
-			"setName":true,
-			"setBulletin":true
+			"bulletin":$newBulletin
 		},
 		"members":[
 			{"uuid":$ownerUuid,"account":$ownerAccount},
