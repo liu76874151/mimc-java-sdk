@@ -162,7 +162,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/account" -XDELETE -
  
 ## 5) 群主踢用户退群(kickTopic):
 
-+ 如下为$ownerAccount踢$userAccount4,$userAccount5退出群
+#### 如下为$ownerAccount踢$userAccount4,$userAccount5退出群
 
 + HTTPS请求
 ```
@@ -192,7 +192,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts?$userAccou
 	
 ## 6) 群主更新群信息(updateTopic):
 
-+ 如下为$ownerAccount更新群信息：群主为$userAccount2，群名称为$newTopicName，群公告为$newBulletin
+#### 如下为$ownerAccount更新群信息：群主为$userAccount2，群名称为$newTopicName，群公告为$newBulletin
 	
 + HTTPS请求
 ```
@@ -222,7 +222,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId?" -XPUT -d '{"topic
 
 ## 7) 群主销毁群(dismissTopic):
 
-+ 如下为群主销毁群
+#### 如下为群主销毁群
 	
 + HTTPS请求
 ```
