@@ -46,7 +46,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId" -XPOST -d '{"topicName":$to
 		"topicInfo":{
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
-			"name":$topicName,
+			"topicName":$topicName,
 			"bulletin":""
 		},
 		"members":[
@@ -76,7 +76,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId" -H "Content-Type: 
 		"topicInfo":{
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
-			"name":$topicName,
+			"topicName":$topicName,
 			"bulletin":""
 		},
 		"members":[
@@ -107,13 +107,13 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/account" -H "Content-Type: a
 		{
 			"topicId":6833471784222720,
 			"ownerUuid":6781513685532672,
-			"name":"testTopic2",
+			"topicName":"testTopic2",
 			"bulletin":"请修改下名称!"
 		},
 		{
 			"topicId":6834445399621632,
 			"ownerUuid":6781513685532672,
-			"name":"testTopic",
+			"topicName":"testTopic",
 			"bulletin":""
 		}
 	]
@@ -137,7 +137,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts" -XPOST -d
 		"topicInfo":{
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
-			"name":$topicName,
+			"topicName":$topicName,
 			"bulletin":""
 		},
 		"members":[
@@ -169,7 +169,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/account" -XDELETE -
 		"topicInfo":{
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
-			"name":$topicName,
+			"topicName":$topicName,
 			"bulletin":""
 		},
 		"members":[
@@ -205,7 +205,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts?accounts=$
 		"topicInfo":{
 			"topicId":$topicId,
 			"ownerUuid":$ownerUuid,
-			"name":$topicName,
+			"topicName":$topicName,
 			"bulletin":""
 		},
 		"members":[
@@ -234,7 +234,7 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId" -XPUT -d '{"topicI
 		"topicInfo":{
 			"topicId":$topicId,
 			"ownerUuid":$userUuid2,
-			"name":$newTopicName,
+			"topicName":$newTopicName,
 			"bulletin":$newBulletin
 		},
 		"members":[
