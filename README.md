@@ -26,7 +26,7 @@ $userToken1				表示userAccount1的token（广义上表示任意一个群成员
 ### PS：
 ```
 token的获取使用User.getToken()方法
-uuid的获取使用User.getUuid()方法
+uuid的获取使用User.getUuid()方法，uuid由MIMC根据($appId, $appAccount)生成，全局唯一
 ```
 
 ## 1) 创建群(createTopic)：
