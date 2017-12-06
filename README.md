@@ -107,16 +107,16 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/account" -H "Content-Type: a
 	"message":"success",
 	"data":[
 		{
-			"topicId":6833471784222720,
-			"ownerUuid":6781513685532672,
-			"topicName":"testTopic2",
-			"bulletin":"请修改下名称!"
+			"topicId":$topicId1,
+			"ownerUuid":$ownerUuid,
+			"topicName":$topicName1,
+			"bulletin":$topicBulletin1
 		},
 		{
-			"topicId":6834445399621632,
-			"ownerUuid":6781513685532672,
-			"topicName":"testTopic",
-			"bulletin":""
+			"topicId":$topicId2,
+			"ownerUuid":$ownerUuid,
+			"topicName":$topicName2,
+			"bulletin":$topicBulletin2
 		}
 	]
 }
@@ -146,9 +146,9 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/accounts" -XPOST -d
 			{"uuid":$ownerUuid,"account":$ownerAccount},
 			{"uuid":$userUuid1,"account":$userAccount1},
 			{"uuid":$userUuid2,"account":$userAccount2},
-			{"uuid":$userUuid1,"account":$userAccount3},
-			{"uuid":$userUuid2,"account":$userAccount4},
-			{"uuid":$userUuid3,"account":$userAccount5}
+			{"uuid":$userUuid3,"account":$userAccount3},
+			{"uuid":$userUuid4,"account":$userAccount4},
+			{"uuid":$userUuid5,"account":$userAccount5}
 		]
 	}
 }
@@ -177,9 +177,9 @@ curl "https://mimc.chat.xiaomi.net/api/topic/$appId/$topicId/account" -XDELETE -
 		"members":[
 			{"uuid":$ownerUuid,"account":$ownerAccount},
 			{"uuid":$userUuid2,"account":$userAccount2},
-			{"uuid":$userUuid1,"account":$userAccount3},
-			{"uuid":$userUuid2,"account":$userAccount4},
-			{"uuid":$userUuid3,"account":$userAccount5}
+			{"uuid":$userUuid3,"account":$userAccount3},
+			{"uuid":$userUuid4,"account":$userAccount4},
+			{"uuid":$userUuid5,"account":$userAccount5}
 		]
 	}
 }
