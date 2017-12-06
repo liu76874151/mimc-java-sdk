@@ -1,3 +1,5 @@
+# 获取方式：
+## 邮件：mimc-help@xiaomi.com，线下索取
 
 # Topic API：
 
