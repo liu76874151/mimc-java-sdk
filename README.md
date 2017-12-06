@@ -10,6 +10,12 @@
 $appId					表示appId
 $topicId				表示群ID
 $topicName				表示创建群的时候所指定的群名称
+$topicId1				表示查询所属群信息时用户所加入群的群ID
+$topicId2				表示查询所属群信息时用户所加入群的群ID
+$topicName1				表示查询所属群信息时用户所加入群的群名称
+$topicName2				表示查询所属群信息时用户所加入群的群名称
+$topicBulletin1				表示查询所属群信息时用户所加入群的群公告
+$topicBulletin2				表示查询所属群信息时用户所加入群的群公告
 $newBulletin				表示更新群时设置的新群公告
 $newTopicName				表示更新群时设置的新群名称
 $ownerUuid				表示群主uuid
