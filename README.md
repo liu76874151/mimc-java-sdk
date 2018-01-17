@@ -407,18 +407,18 @@ curl https://mimc.chat.xiaomi.net/api/msg/p2t/query/ -XPOST -d '{"appId":$appId,
 ```
 ###### 参数说明：
 ```
-appId           小米开放平台申请的AppId
-fromAccount     接入方app账号
-toAccount       接入方app账号
-topicId         群的ID
-utcFromTime     查询开始时间，UTC时间，单位毫秒
-utcToTime       查询结束时间，UTC时间，单位毫秒
-row             返回的消息条数
-messages        返回的消息集合
-sequence        消息sequence
-payload         消息体，app端自己编码解码
-ts              消息时间戳
+$appId           小米开放平台申请的AppId
+$fromAccount     接入方app账号
+$toAccount       接入方app账号
+$topicId         群的ID
+$utcFromTime     查询开始时间，UTC时间，单位毫秒
+$utcToTime       查询结束时间，UTC时间，单位毫秒
+$row             返回的消息条数
+$messages        返回的消息集合
+$sequence        消息sequence
+$payload         消息体，app端自己编码解码
+$ts              消息时间戳
 
 注意：
-utcFromTime和utcToTime的时间间隔不能超过24小时，查询状态为【utcFromTime,utcToTime);
+utcFromTime和utcToTime的时间间隔不能超过24小时，查询状态为[utcFromTime,utcToTime);
 ```
