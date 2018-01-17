@@ -1,3 +1,5 @@
+[跳转到操作指南](https://github.com/Xiaomi-mimc/operation-manual)
+
 # 获取方式：
 ## 邮件：mimc-help@xiaomi.com，线下索取
 
@@ -422,3 +424,5 @@ $ts              消息时间戳
 注意：
 utcFromTime和utcToTime的时间间隔不能超过24小时，查询状态为[utcFromTime,utcToTime);
 ```
+
+[回到顶部](#readme)
