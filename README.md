@@ -26,7 +26,7 @@
 /**
  * @param[appId]: 开发者在小米开放平台申请的appId
  * @param[appAccount]: 用户在APP帐号系统内的唯一帐号ID
- * @param[tokenFetcher]:用户的安全认证
+ * @param[tokenFetcher]: 参考 ## 安全认证
  **/
  User user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher);
 ```
@@ -50,9 +50,6 @@ interface MIMCTokenFetcher{
 ## 登录
 
 ``` java 
-/**
- * @note: 用户登录接口，除在APP初始化时调用，APP从后台切换到前台时也建议调用一次
- **/ 
 user.login();
 ```
 
