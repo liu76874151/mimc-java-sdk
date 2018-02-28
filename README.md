@@ -17,6 +17,23 @@
 即 commons-lang-2.6.jar, json-20150407-jdk16.jar和netty-all-4.1.15.Final.jar
 ```
 
+## 用户初始化
+
+``` java 
+/**
+ * @param[appId]: 开发者在小米开放平台申请的appId
+ * @param[appKey]: 开发者在小米开放平台申请的appKey
+ * @param[appSecurity]: 开发者在小米开放平台申请的appSecurity
+ * @param[appAccount]: 用户在APP帐号系统内的唯一帐号ID
+ **/
+ private final String appAccount1 = "leijun";
+ leijun = new User(Long.parseLong(appId), appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1));
+```
+
+
+
+
+
 # 获取方式：
 ## 邮件：mimc-help@xiaomi.com，线下索取
 
