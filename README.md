@@ -11,6 +11,11 @@
 * [接收消息回调](#接收消息回调)
 * [注销](#注销)
 
+## java项目添加依赖的jar包
+```
+在项目中添加mimc-pcjava-sdk-0.0.1.jar 以及该jar包所依赖的jar包，即 commons-lang-2.6.jar, json-20150407-jdk16.jar和netty-all-4.1.15.Final.jar
+```
+
 # 获取方式：
 ## 邮件：mimc-help@xiaomi.com，线下索取
 
