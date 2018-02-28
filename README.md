@@ -28,8 +28,7 @@
  * @param[appAccount]: 用户在APP帐号系统内的唯一帐号ID
  * @param[tokenFetcher]:用户的安全认证
  **/
- private final String appAccount = "user";
- user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher);
+ User user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher);
 ```
 
 ## 安全认证
