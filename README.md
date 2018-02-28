@@ -1,7 +1,7 @@
 # MIMC官方详细文档点击此链接：[详细文档](https://github.com/Xiaomi-mimc/operation-manual)
 
 ## 目录
-* [java项目添加依赖的jar包](#java项目添加依赖的jar包)
+* [添加依赖包](#添加依赖包)
 * [用户初始化](#用户初始化)
 * [安全认证](#安全认证)
 * [登录](#登录)
@@ -11,10 +11,13 @@
 * [接收消息回调](#接收消息回调)
 * [注销](#注销)
 
-## java项目添加依赖的jar包
+## 添加依赖包
 ```
-在项目中添加sdk目录中最新的jar包，比如：mimc-pcjava-sdk-0.0.1.jar 以及该jar包所依赖的jar包，
-即 commons-lang-2.6.jar, json-20150407-jdk16.jar和netty-all-4.1.15.Final.jar
+在项目中添加sdk目录中最新的jar包：
+    -- mimc-pcjava-sdk-0.0.1.jar
+      |--commons-lang-2.6.jar
+      |--json-20150407-jdk16.jar
+      |--netty-all-4.1.15.Final.jar
 ```
 
 ## 用户初始化
