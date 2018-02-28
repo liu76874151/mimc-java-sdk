@@ -26,6 +26,7 @@
 /**
  * @param[appId]: 开发者在小米开放平台申请的appId
  * @param[appAccount]: 用户在APP帐号系统内的唯一帐号ID
+ * @param[tokenFetcher]:用户的安全认证
  **/
  private final String appAccount = "user";
  user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher);
