@@ -25,17 +25,25 @@
 ``` java 
 /**
  * @param[appId]: 开发者在小米开放平台申请的appId
- * @param[appKey]: 开发者在小米开放平台申请的appKey
- * @param[appSecurity]: 开发者在小米开放平台申请的appSecurity
  * @param[appAccount]: 用户在APP帐号系统内的唯一帐号ID
  **/
- private final String appAccount1 = "user";
- user = new User(Long.parseLong(appId), appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1));
+ private final String appAccount = "user";
+ user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher);
 ```
 
 ## 安全认证
 #### 参考 [详细文档](https://github.com/Xiaomi-mimc/operation-manual) 如何接入 & 安全认证
 ``` java 
+public static class MIMCCaseTokenFetcher implements MIMCTokenFetcher{
+        /**	 
+	 * @note: fetchToken()访问APP应用方自行实现的AppProxyService服务，该服务实现以下功能：
+			1. 存储appId/appKey/appSecret(appKey/appSecret不可存储在APP客户端，以防泄漏)
+			2. 用户在APP系统内的合法鉴权
+			3. 调用小米TokenService服务，并将小米TokenService服务返回结果通过fetchToken()原样返回
+	* @return: 小米TokenService服务下发的原始数据
+	**/
+	public String fetchToken()；
+}
 
 ```
 
