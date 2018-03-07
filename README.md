@@ -107,6 +107,9 @@ interface MIMCMessageHandler {
 	 *        serverAck.sequence: 服务器为消息分配的递增ID，可用于去重/排序
 	 **/ 
 	public void handleServerAck(MIMCServerAck serverAck);
+	
+	public void handleSendMessageTimeout(MIMCMessage message);
+	public void handleSendGroupMessageTimeout(MIMCGroupMessage groupMessage);
 }
 ```
 
