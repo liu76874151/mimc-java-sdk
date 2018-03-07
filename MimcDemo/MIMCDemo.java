@@ -61,6 +61,8 @@ public class MIMCDemo {
             public void handleServerAck(MIMCServerAck serverAck) {
                 loggerContainer.info("ReceiveMessageAck, serverAck:{}", serverAck);
             }
+            public void handleSendMessageTimeout(MIMCMessage message) { /*TODO*/}
+            public void handleSendGroupMessageTimeout(MIMCGroupMessage groupMessage) { /*TODO*/}
         });
     }
 
