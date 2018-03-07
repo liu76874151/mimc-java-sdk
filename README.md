@@ -18,6 +18,7 @@
       |--commons-lang-2.6.jar
       |--json-20150407-jdk16.jar
       |--netty-all-4.1.15.Final.jar
+      |--protobuf-java-2.6.1.jar
 ```
 
 ## 用户初始化
