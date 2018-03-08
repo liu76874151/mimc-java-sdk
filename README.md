@@ -28,7 +28,7 @@
  * @param[appId]: 开发者在小米开放平台申请的appId
  * @param[appAccount]: 用户在APP帐号系统内的唯一帐号ID
  * @param[tokenFetcher]: 用户的安全认证，详细参考下面的安全认证
- * @param[autoLogin]: 用户掉线后是否自动登录，TRUE 自动登录，FALSE 不自动登录。
+ * @param[autoLogin]: 用户掉线后是否自动登录，true 自动登录，false 不自动登录。
  **/
  User user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher， boolean autoLogin);
 ```
@@ -62,7 +62,7 @@ user.login();
 user.registerOnlineStatusHandler(MIMCOnlineStatusHandler handler);
 interface MIMCOnlineStatusHandler {
     /**
-     * @param[isOnline]: 登录状态，TRUE 在线，FALSE 离线。
+     * @param[isOnline]: 登录状态，true 在线，false 离线。
      * @param[errType]: 状态改变错误码
      * @param[errReason]: 状态改变错误原因
      * @param[errDescription]: 状态改变错误描述
