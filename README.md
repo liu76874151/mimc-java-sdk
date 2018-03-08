@@ -28,8 +28,9 @@
  * @param[appId]: 开发者在小米开放平台申请的appId
  * @param[appAccount]: 用户在APP帐号系统内的唯一帐号ID
  * @param[tokenFetcher]: 用户的安全认证，详细参考下面的安全认证
+ * @param[autoLogin]: 登录掉线后是否自动登录，TRUE 自动登录，FALSE 不自动登录。
  **/
- User user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher);
+ User user = new User(long appId, String appAccount, MIMCTokenFetcher tokenFetcher， boolean autoLogin);
 ```
 
 ## 安全认证
