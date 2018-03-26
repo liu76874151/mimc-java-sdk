@@ -76,9 +76,10 @@ interface MIMCOnlineStatusHandler {
 /**
  * @param[toAppAccount]: 消息接收者在APP帐号系统内的唯一帐号ID
  * @param[payload]: 开发者自定义消息体
+ * @param[ifStore]: 消息是否存储，true 存储, false 不存储, 默认是存储。
  * @return: 客户端生成的消息ID
  **/ 
-String packetId = user.sendMessage(String toAppAccount, byte[] payload);
+String packetId = user.sendMessage(String toAppAccount, byte[] payload, boolean ifStore);
 ```
 
 ## 发送群聊消息
@@ -87,9 +88,10 @@ String packetId = user.sendMessage(String toAppAccount, byte[] payload);
 /**
  * @param[groupId]: 群ID，也称为topicId
  * @param[payload]: 开发者自定义消息体
+ * @param[ifStore]: 消息是否存储，true 存储, false 不存储, 默认是存储。
  * @return: 客户端生成的消息ID
  **/ 
-String packetId = user.sendGroupMessage(long groupID, byte[] payload); 
+String packetId = user.sendGroupMessage(long groupID, byte[] payload, boolean ifStore); 
 ```
 
 ## 接收消息回调
