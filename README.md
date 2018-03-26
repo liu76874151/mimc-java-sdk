@@ -79,6 +79,7 @@ interface MIMCOnlineStatusHandler {
  * @param[isStore]: 消息是否存储，true 存储, false 不存储, 默认存储。
  * @return: 客户端生成的消息ID
  **/ 
+String packetId = user.sendMessage(String toAppAccount, byte[] payload);
 String packetId = user.sendMessage(String toAppAccount, byte[] payload, boolean isStore);
 ```
 
@@ -91,6 +92,7 @@ String packetId = user.sendMessage(String toAppAccount, byte[] payload, boolean 
  * @param[isStore]: 消息是否存储，true 存储, false 不存储, 默认存储。
  * @return: 客户端生成的消息ID
  **/ 
+String packetId = user.sendGroupMessage(long groupID, byte[] payload);
 String packetId = user.sendGroupMessage(long groupID, byte[] payload, boolean isStore); 
 ```
 
