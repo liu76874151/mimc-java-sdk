@@ -37,6 +37,7 @@ public class MIMCDemo {
     private User linbin;
 
     public MIMCDemo() throws Exception {
+        loggerContainer.setLevel(LoggerLevel.INFO);
         leijun = new User(Long.parseLong(appId), appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1));
         linbin = new User(Long.parseLong(appId), appAccount2, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount2));
         init(leijun);
