@@ -1,5 +1,6 @@
 package com.xiaomi.mimc.javasdk.example;
 
+import com.xiaomi.mimc.javasdk.data.LoggerLevel;
 import com.xiaomi.mimc.javasdk.data.MIMCGroupMessage;
 import com.xiaomi.mimc.javasdk.data.MIMCMessage;
 import com.xiaomi.mimc.javasdk.data.MIMCServerAck;
