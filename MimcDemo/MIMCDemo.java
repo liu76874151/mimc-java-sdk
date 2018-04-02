@@ -39,8 +39,8 @@ public class MIMCDemo {
 
     public MIMCDemo() throws Exception {
         loggerContainer.setLevel(LoggerLevel.INFO);
-        leijun = new User(Long.parseLong(appId), appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1));
-        linbin = new User(Long.parseLong(appId), appAccount2, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount2));
+        leijun = new User(Long.parseLong(appId), appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1), true);
+        linbin = new User(Long.parseLong(appId), appAccount2, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount2), true);
         init(leijun);
         init(linbin);
     }
@@ -72,7 +72,7 @@ public class MIMCDemo {
         leijun.login();
         linbin.login();
 
-        Thread.sleep(200);
+        Thread.sleep(1000);
     }
 
     public void sendMessage() throws Exception {
@@ -86,9 +86,9 @@ public class MIMCDemo {
         }
 
         leijun.sendMessage(linbin.appAccount(), "Are you OK?".getBytes("utf-8"));
-        Thread.sleep(100);
+        Thread.sleep(1000);
         linbin.sendMessage(leijun.appAccount(), "I'm OK!".getBytes("utf-8"));
-        Thread.sleep(100);
+        Thread.sleep(1000);
     }
 
     public static void main(String[] args) throws Exception {
