@@ -10,6 +10,7 @@
 * [发送群聊消息](#发送群聊消息)
 * [接收消息回调](#接收消息回调)
 * [注销](#注销)
+* [日志打印](#日志打印)
 
 ## 添加依赖包
 ```
@@ -121,6 +122,22 @@ interface MIMCMessageHandler {
 
 ``` java 
 user.logout();
+```
+
+## 日志打印
+
+```java
+/**	 
+* @note: 
+1:自己定义的日志类实现Logger接口
+2：获取LoggerContainer实例
+3：设置LoggerContainer中的Logger对象为自己实现Logger接口的日志类
+4：设置sdk的日志级别，默认是DEBUG， 
+**/
+public MyLogger implements Logger{...}
+LoggerContainer loggerContainer = LoggerContainer.instance();
+loggerContainer.setLogger(MyLogger);
+loggerContainer.setLevel(LoggerLevel.INFO);
 ```
 
 [回到顶部](#readme)
