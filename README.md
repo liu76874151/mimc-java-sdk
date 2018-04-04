@@ -128,34 +128,24 @@ user.logout();
 
 ```java
 /**	 
-1:自己定义的日志类MyLogger实现Logger接口
+1. 自己定义的日志类MyLogger实现Logger接口
 **/
 public MyLogger implements Logger{...}
 
 /**
-2：获取LoggerContainer实例
+2. 获取LoggerContainer实例
 **/
 LoggerContainer loggerContainer = LoggerContainer.instance();
 
 /**
-3：设置LoggerContainer中的Logger变量
+3. 设置LoggerContainer中的Logger变量
 **/
 loggerContainer.setLogger(MyLogger);
 
 /**
-4：设置sdk的日志级别，默认是DEBUG
+4. 设置sdk的日志级别，默认是DEBUG, 优先级从高到低分别是 ERROR, WARN, INFO, DEBUG
 **/
 loggerContainer.setLevel(LoggerLevel.INFO);
-
-/**
-日志级别:优先级从高到低分别是 ERROR, WARN, INFO, DEBUG
-**/
-public enum LoggerLevel {
-    DEBUG(0),
-    INFO(1),
-    WARN(2),
-    ERROR(3);
-}
 
 /**
 @note: 不设置日志，sdk的日志默认打印到控制台上
