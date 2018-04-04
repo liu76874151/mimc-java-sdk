@@ -146,6 +146,7 @@ loggerContainer.setLogger(MyLogger);
 4：设置sdk的日志级别，默认是DEBUG
 **/
 loggerContainer.setLevel(LoggerLevel.INFO);
+
 /**
 日志级别:优先级从高到低分别是 ERROR, WARN, INFO, DEBUG
 **/
