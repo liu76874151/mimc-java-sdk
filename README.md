@@ -146,7 +146,7 @@ loggerContainer.setLogger(MyLogger);
 **/
 loggerContainer.setLevel(LoggerLevel.INFO);
 /**
-*note:日志级别
+@note: 日志级别
 **/
 enum LoggerLevel {
     DEBUG(0),
