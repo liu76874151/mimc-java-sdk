@@ -34,7 +34,7 @@
 ```
 
 ## 安全认证
-#### 参考 [详细文档](https://github.com/Xiaomi-mimc/operation-manual) 如何接入 & 安全认证
+#### 参考 [详细文档](https://github.com/Xiaomi-mimc/operation-manual#%E5%AE%89%E5%85%A8%E8%AE%A4%E8%AF%81) 安全认证
 ``` java 
 interface MIMCTokenFetcher{
         /**	 
