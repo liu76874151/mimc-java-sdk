@@ -1,15 +1,15 @@
 package com.xiaomi.mimc.javasdk.example;
 
-import com.xiaomi.mimc.javasdk.data.LoggerLevel;
 import com.xiaomi.mimc.javasdk.data.MIMCGroupMessage;
 import com.xiaomi.mimc.javasdk.data.MIMCMessage;
 import com.xiaomi.mimc.javasdk.data.MIMCServerAck;
 import com.xiaomi.mimc.javasdk.handler.MIMCMessageHandler;
 import com.xiaomi.mimc.javasdk.handler.MIMCOnlineStatusHandler;
-import com.xiaomi.mimc.javasdk.log.LoggerContainer;
 import com.xiaomi.mimc.javasdk.user.User;
 import org.apache.commons.lang.StringUtils;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.List;
 
 public class MIMCDemo {
-    LoggerContainer loggerContainer = LoggerContainer.instance();
+    private static Logger LOGGER = LoggerFactory.getLogger(MIMCDemo.class);
 
     /**
      * @Important:
@@ -38,7 +38,6 @@ public class MIMCDemo {
     private User linbin;
 
     public MIMCDemo() throws Exception {
-        loggerContainer.setLevel(LoggerLevel.INFO);
         leijun = new User(Long.parseLong(appId), appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1), true);
         linbin = new User(Long.parseLong(appId), appAccount2, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount2), true);
         init(leijun);
@@ -48,20 +47,20 @@ public class MIMCDemo {
     private void init(final User user) throws Exception {
         user.registerOnlineStatusHandler(new MIMCOnlineStatusHandler() {
             public void statusChange(boolean isOnline, String errType, String errReason, String errDescription) {
-                loggerContainer.info("OnlineStatusHandler, Called, {}, isOnline:{}, errType:{}, :{}, errDesc:{}",
+                LOGGER.info("OnlineStatusHandler, Called, {}, isOnline:{}, errType:{}, :{}, errDesc:{}",
                         user.appAccount(), isOnline, errType, errReason, errDescription);
             }
         });
         user.registerMessageHandler(new MIMCMessageHandler() {
             public void handleMessage(List<MIMCMessage> packets) {
                 for (MIMCMessage p : packets) {
-                    loggerContainer.info("ReceiveMessage, P2P, {}-->{}, packetId:{}, payload:{}",
+                    LOGGER.info("ReceiveMessage, P2P, {}-->{}, packetId:{}, payload:{}",
                             p.getFromAccount(), user.appAccount(), p.getPacketId(), new String(p.getPayload()));
                 }
             }
             public void handleGroupMessage(List<MIMCGroupMessage> packets) { /*TODO*/}
             public void handleServerAck(MIMCServerAck serverAck) {
-                loggerContainer.info("ReceiveMessageAck, serverAck:{}", serverAck);
+                LOGGER.info("ReceiveMessageAck, serverAck:{}", serverAck);
             }
             public void handleSendMessageTimeout(MIMCMessage message) { /*TODO*/}
             public void handleSendGroupMessageTimeout(MIMCGroupMessage groupMessage) { /*TODO*/}
@@ -77,11 +76,11 @@ public class MIMCDemo {
 
     public void sendMessage() throws Exception {
         if (!leijun.isOnline()) {
-            loggerContainer.error("{} login fail, quit!", leijun.appAccount());
+            LOGGER.error("{} login fail, quit!", leijun.appAccount());
             return;
         }
         if (!linbin.isOnline()) {
-            loggerContainer.error("{} login fail, quit!", linbin.appAccount());
+            LOGGER.error("{} login fail, quit!", linbin.appAccount());
             return;
         }
 
@@ -100,7 +99,6 @@ public class MIMCDemo {
     }
 
     public static class MIMCCaseTokenFetcher implements com.xiaomi.mimc.javasdk.handler.MIMCTokenFetcher {
-        LoggerContainer loggerContainer = LoggerContainer.instance();
         private String httpUrl;
         private String appId;
         private String appKey;
@@ -139,7 +137,7 @@ public class MIMCDemo {
 
             con.getOutputStream().write(obj.toString().getBytes("utf-8"));
             if (200 != con.getResponseCode()) {
-                loggerContainer.error("con.getResponseCode()!=200");
+                LOGGER.error("con.getResponseCode()!=200");
                 System.exit(0);
             }
 
@@ -151,7 +149,7 @@ public class MIMCDemo {
                 content.append(StringUtils.trim(inputLine));
             }
             in.close();
-            loggerContainer.info(content.toString());
+            LOGGER.info(content.toString());
 
             return content.toString();
         }
