@@ -20,6 +20,9 @@
       |--json-20150407-jdk16.jar
       |--netty-all-4.1.15.Final.jar
       |--protobuf-java-2.6.1.jar
+      |--log4j-1.2.17.jar
+      |--slf4j-api-1.7.5.jar
+      |--slf4j-log4j12-1.7.5.jar
 ```
 
 ## 用户初始化
