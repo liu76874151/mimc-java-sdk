@@ -32,8 +32,8 @@ public class MIMCDemo {
     private static final String appKey = "5361761377988";
     private static final String appSecurity = "2SZbrJOAL1xHRKb7L9AiRQ==";
 
-    private final String appAccount1 = "leijun";
-    private final String appAccount2 = "linbin";
+    private final String appAccount1 = "pcJavaDemo1";
+    private final String appAccount2 = "pcJavaDemo2";
     private User leijun;
     private User linbin;
 

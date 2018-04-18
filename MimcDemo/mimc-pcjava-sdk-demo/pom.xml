@@ -35,13 +35,13 @@
             <version>1.7.5</version>
         </dependency>
 
-        <!--将最新的mimc-pcjava-sdk.jar 更新到lib目录-->
+        <!--将最新的mimc-pcjava-sdk.jar 更新到lib目录,并更改依赖jar包的版本号-->
         <dependency>
             <groupId>com.xiaomi.msg</groupId>
             <artifactId>mimc-pcjava-sdk</artifactId>
-            <version>5.0</version>
+            <version>0.0.5</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/mimc-pcjava-sdk.jar</systemPath>
+            <systemPath>${basedir}/lib/mimc-pcjava-sdk-0.0.5.jar</systemPath>
         </dependency>
     </dependencies>
 
