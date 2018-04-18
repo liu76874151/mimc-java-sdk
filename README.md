@@ -14,7 +14,7 @@
 ## 添加依赖包
 ```
 在项目中添加sdk目录中最新的jar包：
-   |-- mimc-pcjava-sdk-0.0.1.jar
+   |-- mimc-pcjava-sdk-0.0.5.jar
       |--commons-lang-2.6.jar
       |--json-20150407-jdk16.jar
       |--netty-all-4.1.15.Final.jar
