@@ -39,9 +39,9 @@
         <dependency>
             <groupId>com.xiaomi.msg</groupId>
             <artifactId>mimc-pcjava-sdk</artifactId>
-            <version>0.0.5</version>
+            <version>0.0.6</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/mimc-pcjava-sdk-0.0.5.jar</systemPath>
+            <systemPath>${basedir}/lib/mimc-pcjava-sdk-0.0.6.jar</systemPath>
         </dependency>
     </dependencies>
 
