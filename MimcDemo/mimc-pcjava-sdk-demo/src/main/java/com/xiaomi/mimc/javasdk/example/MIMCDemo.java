@@ -38,8 +38,8 @@ public class MIMCDemo {
     private User linbin;
 
     public MIMCDemo() throws Exception {
-        leijun = new User(Long.parseLong(appId), appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1), true);
-        linbin = new User(Long.parseLong(appId), appAccount2, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount2), true);
+        leijun = new User(appAccount1, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount1), true);
+        linbin = new User(appAccount2, new MIMCCaseTokenFetcher(appId, appKey, appSecurity, url, appAccount2), true);
         init(leijun);
         init(linbin);
     }
