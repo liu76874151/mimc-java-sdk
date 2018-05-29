@@ -84,10 +84,11 @@ public class MIMCDemo {
             return;
         }
 
-        leijun.sendMessage(linbin.appAccount(), "Are you OK?".getBytes("utf-8"));
-        Thread.sleep(1000);
-        linbin.sendMessage(leijun.appAccount(), "I'm OK!".getBytes("utf-8"));
-        Thread.sleep(1000);
+        for (int i = 0; i < 1000; i++) {
+            leijun.sendMessage(linbin.appAccount(),
+                    String.format("leijun(%s)-->linbin(%s), %s", leijun.getUuid(), linbin.getUuid(), i).getBytes());
+            Thread.sleep(5000);
+        }
     }
 
     public static void main(String[] args) throws Exception {
